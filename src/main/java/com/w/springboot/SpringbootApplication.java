@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-//@RestController
+@RestController
 @SpringBootApplication
 public class SpringbootApplication {
 
@@ -13,8 +13,8 @@ public class SpringbootApplication {
 		SpringApplication.run(SpringbootApplication.class, args);
 	}
 	
-	/*@RequestMapping("/")
+	@RequestMapping("/")
     public String greeting() {
         return "Hello World!";
-    }*/
+    }
 }
