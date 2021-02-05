@@ -1,20 +1,22 @@
 package com.w.springboot;
 
+import java.io.IOException;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+//@RestController
 @SpringBootApplication
 public class SpringbootApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		SpringApplication.run(SpringbootApplication.class, args);
+		int i = System.in.read();
+		System.out.println(i);
 	}
 	
-	@RequestMapping("/")
+	/*@RequestMapping("/")
     public String greeting() {
         return "Hello World!";
-    }
+    }*/
 }
