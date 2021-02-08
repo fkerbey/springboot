@@ -12,14 +12,14 @@ import com.w.springboot.test.service.IUserService;
 public class UserServiceImpl implements IUserService {
 
 	@Autowired
-	private DbClient  client;
+	private DbClient client;
 	
 	@Override
 	public User findUserByUserName(String name) {
 		User user = new User();
 		user.setUsername(name);
-		Object findOne = client.findOne(1);
-		return null;
+		User findOne = client.findOne(1);
+		return findOne;
 	}
 
 }

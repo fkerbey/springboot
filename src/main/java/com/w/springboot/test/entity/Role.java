@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity()
 @Table(name = "role")
@@ -19,8 +20,11 @@ public class Role implements Serializable {
 	@Column(name = "rid")
     @GeneratedValue
 	private Integer rid;
+	@Column(name = "rname")
 	private String rname;
+	@Transient
 	private Set<User> users = new HashSet<>();
+	@Transient
 	private Set<Module> modules = new HashSet<>();
 	/**
 	 * @return the rid

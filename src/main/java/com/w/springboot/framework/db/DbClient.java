@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.w.springboot.test.entity.User;
 
-public interface DbClient extends JpaRepository<User, Serializable>  {
+public interface DbClient extends JpaRepository<User, Serializable> {
+
 
 }

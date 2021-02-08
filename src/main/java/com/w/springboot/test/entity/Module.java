@@ -8,6 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity()
 @Table(name = "module")
@@ -19,7 +20,9 @@ public class Module implements Serializable {
 	@Column(name = "mid")
     @GeneratedValue
 	private Integer mid;
+	@Column(name = "mname")
 	private String mname;
+	@Transient
 	private Set<Role> roles;
 	/**
 	 * @return the mid
