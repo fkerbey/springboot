@@ -16,10 +16,8 @@ public class UserServiceImpl implements IUserService {
 	
 	@Override
 	public User findUserByUserName(String name) {
-		User user = new User();
-		user.setUsername(name);
-		User findOne = client.findOne(1);
-		return findOne;
+		User user = client.findUserByusername("xiaoming");
+		return user;
 	}
 
 }

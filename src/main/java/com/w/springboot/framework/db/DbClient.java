@@ -8,5 +8,8 @@ import com.w.springboot.test.entity.User;
 
 public interface DbClient extends JpaRepository<User, Serializable> {
 
+	//@Query("SELECT * FROM user WHERE username = :name ")
+	User findUserByusername(String name);
+
 
 }
